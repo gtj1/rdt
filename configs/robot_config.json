@@ -1,0 +1,87 @@
+{
+    "path": {
+        "replay": "data/replay",
+        "record": "data/datasets/my_cool_dataset/1"
+    },
+    "arm": {
+        "ip": "192.168.1.41",
+        "port": 8899,
+        "name": "Robot_E5",
+        "max_joint_angular_acceleration": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+        "max_joint_angular_velocity": [0.7, 0.7, 0.7, 0.7, 0.7, 0.7],
+        "max_end_effector_acceleration": 0.5,
+        "max_end_effector_velocity": 0.2,
+        "collision_class": 6
+    },
+    "gripper": {
+        "port": "/dev/ttyUSB0",
+        "baudrate": 115200,
+        "slave_id": 9,
+        "max_position": 255.0
+    },
+    "camera": {
+        "rgbd": {
+            "width": 640,
+            "height": 480,
+            "frame_rate": 30
+        },
+        "usb": {
+            "width": 320,
+            "height": 256,
+            "warmup_frames": 100
+        },
+        "resize": {
+            "width": 320,
+            "height": 256
+        }
+    },
+    "joystick": {
+        "id": 0,
+        "deadzone": 0.2,
+        "polling_interval": 0.1,
+        "mapping": {
+            "x": {
+                "type": "axis",
+                "id": 0,
+                "scale": 0.04
+            },
+            "y": {
+                "type": "axis",
+                "id": 1,
+                "scale": -0.04
+            },
+            "z": {
+                "type": "axis",
+                "id": 4,
+                "scale": -0.04
+            },
+            "roll": {
+                "type": "hat",
+                "id": 0,
+                "index": 1,
+                "scale": 0.05
+            },
+            "pitch": {
+                "type": "hat",
+                "id": 0,
+                "index": 0,
+                "scale": -0.05
+            },
+            "yaw": {
+                "type": "axis",
+                "id": 3,
+                "scale": 0.05
+            },
+            "gripper open": {
+                "type": "axis",
+                "id": 2,
+                "scale": 1.0
+            },
+            "gripper close": {
+                "type": "axis",
+                "id": 5,
+                "scale": 1.0
+            }
+        }
+    }
+}
